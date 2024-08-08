@@ -1,0 +1,150 @@
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(100, 100, 100);
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+#panels {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+}
+
+.panel {
+    position: relative;
+    display: inline-block;
+    padding: 12px;
+    background-color: rgb(255, 255, 255);
+    border: 4px outset rgb(151, 151, 151);
+    height: 100%;
+    vertical-align: top;
+    width: 175px;
+}
+
+.panel:not(:last-child) {
+    margin-right: 4px;
+}
+
+#hello-panel {
+    width: 250px;
+}
+
+.link {
+    display: block;
+    position: relative;
+    width: calc(100% - 2px);
+    height: 20px;
+    margin-top: 3px;
+    text-decoration: none;
+    color: black;
+    border: 2px outset rgb(211, 211, 211);
+    font-size: 13px;
+    padding-left: 2px;
+    overflow: hidden;
+}
+
+.link-icon {
+    position: relative;
+    display: inline-block;
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    background-image: url("./img/links.png");
+    image-rendering: pixelated;
+}
+
+.link-text {
+    position: relative;
+    display: inline;
+    top: -4px;
+    text-decoration: underline;
+}
+
+.link-desc {
+    line-height: 1;
+    margin: 2px 0 4px 0;
+}
+
+.link:hover {
+    height: fit-content;
+}
+
+.link:active {
+    border: 2px inset rgb(211, 211, 211);
+}
+
+.link.first {
+    margin-top: 8px;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+
+#cog1 {
+    left: -64px;
+    top: -32px;
+}
+
+#cog2 {
+    left: 40px;
+    top: -64px;
+    animation-direction: reverse;
+    transform: scale(0.9);
+}
+
+.cog {
+    position: absolute;
+    background-image: url("./img/cogInTheMachine.png");
+    width: 128px;
+    height: 128px;
+    animation: cog-spin 6s infinite;
+    animation-timing-function: linear;
+}
+
+#internets {
+    position: absolute;
+    display: block;
+    left: 8px;
+    bottom: 4px;
+    width: calc(100% - 16px);
+    height: fit-content;
+}
+
+#internets:hover > img {
+    animation: internets-hover 5s infinite;
+}
+
+#internets > img {
+    width: 100%;
+    object-fit: contain;
+}
+
+a {
+    color: black;
+}
+
+@keyframes cog-spin {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+@keyframes internets-hover {
+    0% {box-shadow: 0 0 16px 3px red;}
+    20% {box-shadow: 0 0 16px 3px yellow;}
+    40% {box-shadow: 0 0 16px 3px green;}
+    60% {box-shadow: 0 0 16px 3px cyan;}
+    80% {box-shadow: 0 0 16px 3px purple;}
+    100% {box-shadow: 0 0 16px 3px red;}
+}

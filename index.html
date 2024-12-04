@@ -60,5 +60,15 @@
                 </a>
             </div>
         </div>
+		<div id="snow" style="display: none;"></div>
+		<div id="snowflakes" style="display: none;"></div>
+		<script>
+			const month = new Date().getMonth();
+			
+			if (month == 11 || month == 0) {
+				document.getElementById("snow").style.display = "block";
+				document.getElementById("snowflakes").style.display = "block";
+			}
+		</script>
     </body>
 </html>
